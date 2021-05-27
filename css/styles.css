@@ -1,0 +1,379 @@
+html {
+    box-sizing: border-box;
+    background-color: black;
+    height: 100%;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+body {
+    /*font-family:Arial,Helvetica,sans-serif;*/
+    /*font-size:1em;*/ /* about equivalent to 16px * 1 = 16px */
+    /*line-height:1.5;*/
+    font: normal 1em/1.5 Calibiri, Helvetica, sans-serif;
+    margin: 0;
+    height: 100%;
+}
+h1,
+h2,
+h3 {
+    font-family: Calibiri, Helvetica, sans-serif;
+}
+h2 {
+    text-align: center;
+    padding: 1em;
+}
+.logo {
+    width: 100px;
+    max-width: 100%;
+    height: auto;
+    float: left;
+}
+.hidden {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+}
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 100%;
+}
+#header {
+    background-color: red;
+    border: 1px solid black;
+    padding-bottom: 4em;
+}
+.menu li a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.menu a:hover {
+    color: black;
+    text-decoration: underline;
+}
+.menu .active {
+    color: black;
+    text-decoration: underline;
+}
+.menu {
+    padding: 0;
+    float: right;
+    position: relative;
+    z-index: 9999;
+}
+.menu li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 3em;
+}
+.menu li:last-child {
+    margin: 0;
+}
+.menu ul li ul {
+    position: absolute;
+    margin-left: 10px;
+}
+.dropdown {
+    width: 180%;
+    padding: 2px;
+    margin-top: 2px;
+    position: relative; /* if there's a sub-sub-menu, we'll need to position the sub-sub-menu relative to the second level li */
+}
+.dropitem {
+    width: 100%;
+    padding: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: block;
+    border-bottom: 1px solid white;
+}
+#main-menu li ul {
+    position: absolute;
+    width: 150px;
+    left: -10000px;
+    background-color: red;
+}
+#main-menu ul li:hover ul {
+    left: 0;
+    top: 100%;
+    display: inline-block;
+}
+#main-menu li {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+}
+.menu li:hover > ul {
+    text-align: left;
+    top: 100%;
+    display: block;
+}
+ol.breadcrumb li {
+    display: inline;
+    font-size: 0.9em;
+    color: white;
+}
+ol.breadcrumb li + li:before {
+    padding: 5px;
+    color: white;
+    content: ">";
+}
+ol.breadcrumb li a {
+    color: white;
+    text-decoration: none;
+}
+ol.breadcrumb li a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.banner {
+    background-image: url("../images/f1header1.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    height: 300px;
+    margin-top: -40px;
+}
+
+.homebanner {
+    background-image: url("../images/f1header1.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 1;
+    height: 300px;
+    margin-top: -40px;
+    min-height: 100%;
+    margin-bottom: 3em;
+}
+.maintitle {
+    color: white;
+    text-align: center;
+    padding-top: 9%;
+    font-size: 2.5em;
+}
+#content {
+    border: 1px solid red;
+    width: 66%;
+    display: inline-block;
+    padding: 1em;
+    margin: 0 2% 2% 2%;
+    background-color: white;
+}
+a:link {
+    color: blue;
+    background-color: transparent;
+}
+.author {
+    font-size: 1em;
+    text-align: center;
+    color: white;
+    margin-top: -15px;
+}
+.fa-edit {
+    color: red;
+}
+.fa-calendar-day {
+    color: red;
+}
+.rivalryimages {
+    /*float:right;*/
+    margin-right: 1em;
+    margin-bottom: 1em;
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.caption {
+    display: block;
+    font-size: 0.8em;
+    text-align: center;
+}
+#commentform {
+    border: 1px solid black;
+    width: 100%;
+    display: inline-block;
+    padding: 1em;
+    background-color: lightgrey;
+}
+#comments {
+    width: 80%;
+    display: inline-block;
+    height: 100px;
+    padding: 10px;
+}
+#sidebar {
+    border: 1px solid red;
+    width: 28%;
+    float: right;
+    margin: 0 2% 0 0;
+    text-align: center;
+    background-color: white;
+}
+#sidebar h2 {
+    color: white;
+    background-color: red;
+    font-size: 1.5em;
+}
+.subscribe {
+    margin: 5%;
+}
+#name,
+#email {
+    max-width: 100%;
+    width: 150px;
+}
+#main,
+#sidebar {
+    margin-bottom: 1em;
+}
+.searchbar {
+    width: 250px;
+    height: 35px;
+    max-width: 100%;
+}
+.nextrace {
+    text-align: center;
+    font-size: 1.5em;
+    color: black;
+    max-width: 100%;
+}
+.newsimage {
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+}
+.news {
+    margin-bottom: 20px;
+}
+button {
+    padding: 0.5em 0.5em;
+    margin-top: 0.5em;
+    background-color: black;
+    color: white;
+    font-weight: 900;
+}
+.social {
+    font-size: 1.8em;
+    color: black;
+    padding: 7px;
+}
+#footer {
+    background-color: red;
+    border: 1px solid red;
+    text-align: center;
+    width: 100%;
+    padding: 7px;
+    color: white;
+    clear: both;
+    position: relative;
+}
+main {
+    min-height: 100%;
+    margin-bottom: 3em;
+    position: relative;
+    margin: auto;
+    margin-bottom: 3em;
+}
+.container {
+    min-height: 100%;
+    margin-bottom: 3em;
+    background-color: white;
+    max-width: 80%;
+    position: relative;
+    margin: auto;
+    margin-bottom: 3em;
+}
+.title {
+    color: white;
+    text-align: center;
+    padding-top: 3%;
+    font-size: 1.5em;
+}
+.unsplash {
+    text-align: center;
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.donate a {
+    background-color: #000;
+    color: #ffffff;
+    padding: 0.4em 0.75em;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.donate a:hover {
+    background-color: #ffffff;
+    color: #ff0000;
+}
+
+#donate-text {
+    text-align: center;
+    padding: 2em;
+}
+
+.donate-thankyou {
+    text-align: center;
+}
+.donate-button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 160px;
+    height: auto;
+}
+
+.list {
+    text-align: initial;
+    padding-left: 10em;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td,
+table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: red;
+    color: white;
+}
+
+.photos {
+    width: 100%;
+}
+
+.gallery-photo {
+    margin: 1.5em;
+}
+
+.gallery {
+    padding-top: 0.5em;
+}
